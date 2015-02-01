@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://10.143.6.164:80/SBHacksClient/server/client_to_server.js"></script>
+<script src="http://10.143.6.164:80/SBHacksClient/libs/three.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#button2").click(function(){
+           removeCommit.apply(this, [2]);
+        });
+        $("#button3").click(function(){
+            receiveCommit.apply(this, [5]);
+        });
+        $("#button4").click(function(){
+            var point = new THREE.Vector3(4,5,6);
+            var array = [1,2,3];
+            alert(point + ", " + array);
+            translatePoints.apply(this, [point, array]);
+        });
+        $("#button5").click(function(){
+            var point = new THREE.Vector3(4,5,6);
+			var origin = new THREE.Vector3(0,0,0);
+            var array = [1,2,3];
+            alert(point + ", " + array);
+            scalePoints.apply(this, [point, array, origin]);
+        });
+    });
+
+</script>
+
+</head>
+<body>
+
+<button id = "button2">Remove an entry</button>
+<br>
+<button id = "button3">Get an entry</button>
+<br>
+<button id = "button4">Translate Points</button>
+<br>
+<button id = "button5">Scale Points</button>
+
+</body>
+</html>
+
